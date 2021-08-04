@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:office_test_app/page_chewie_player.dart';
+import 'package:office_test_app/page_facebook_signin.dart';
 import 'package:office_test_app/page_google_signIn.dart';
 import 'package:office_test_app/page_video_player.dart';
 import 'package:office_test_app/video_player/home_video_player.dart';
@@ -48,6 +49,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text('Google Signin')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FacebookSignIn()),
+                  );
+                },
+                child: Text('Facebook Signin')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
