@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1046318127951",
+    "project_id": "sign-deb17",
+    "storage_bucket": "sign-deb17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046318127951:android:a88b4597d746cfefb1433a",
+        "android_client_info": {
+          "package_name": "com.example.office_test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046318127951-onhmco3vffm0glu0163ciiucgviicale.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.office_test_app",
+            "certificate_hash": "ab0a659b09119ab84427b4716242383a034b7f36"
+          }
+        },
+        {
+          "client_id": "1046318127951-9u3j3uj02bfsu44ktfc69s3n4ktt3qpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUopCdxY6v9ulA0ocZjH6GDSyAf0lLMpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046318127951-9u3j3uj02bfsu44ktfc69s3n4ktt3qpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
