@@ -35,6 +35,8 @@ dependencies:
   chewie: ^1.2.2
   flutter_facebook_auth: ^3.5.0
   package_info_plus: ^1.0.4
+  sms_autofill: ^2.0.1
+  pin_input_text_field: ^4.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
