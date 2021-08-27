@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:office_test_app/oath2_signin/page_facebook_signin.dart';
+import 'package:office_test_app/oath2_signin/page_google_signIn.dart';
 import 'package:office_test_app/page_home.dart';
 
 void main() {

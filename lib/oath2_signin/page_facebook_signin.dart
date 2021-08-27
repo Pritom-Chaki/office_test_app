@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:office_test_app/page_otp_sms.dart';
 
 class FacebookSignIn extends StatefulWidget {
   const FacebookSignIn({Key? key}) : super(key: key);
@@ -23,35 +24,49 @@ class _FacebookSignInState extends State<FacebookSignIn> {
       body: Container(
         child: _isLogin
             ? Center(
-              child: Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.network(_userObj["picture"]["data"]["url"]),
                     Text(_userObj["name"]),
                     Text(_userObj["email"]),
-                    TextButton(onPressed: () {
-                      fbLogOut();
-                    }, child: Text("Logout"))
+                    TextButton(
+                        onPressed: () {
+                          fbLogOut();
+                        },
+                        child: Text("Logout"))
                   ],
                 ),
-            )
-            : Center(
-                child: ElevatedButton(
-                  child: Text("Login with Facebook"),
-                  onPressed: ()  {
-                    fbLogIn();
-                  },
-                ),
+              )
+            : Column(
+                children: [
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Registration()),
+                        );
+                      },
+                      child: Text('OTP SMS Pages')),
+                  Center(
+                    child: ElevatedButton(
+                      child: Text("Login with Facebook"),
+                      onPressed: () {
+                        fbLogIn();
+                      },
+                    ),
+                  ),
+                ],
               ),
       ),
     );
   }
 
   void fbLogIn() async {
-    FacebookAuth.instance.login(
-        permissions: ["public_profile", "email"]
-    ).then((value) {
+    FacebookAuth.instance
+        .login(permissions: ["public_profile", "email"]).then((value) {
       FacebookAuth.instance.getUserData().then((userData) {
         setState(() {
           _isLogin = true;

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import "package:http/http.dart" as http;
+import 'package:office_test_app/page_otp_sms.dart';
 
 // GoogleSignIn _googleSignIn = GoogleSignIn(
 //   // Optional clientId
@@ -23,7 +24,7 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   GoogleSignIn _googleSignIn = GoogleSignIn(
-     // clientId: '1046318127951-onhmco3vffm0glu0163ciiucgviicale.apps.googleusercontent.com',
+      // clientId: '1046318127951-onhmco3vffm0glu0163ciiucgviicale.apps.googleusercontent.com',
       scopes: ['profile', 'email']);
 
   GoogleSignInAccount? _currentUser;
@@ -142,6 +143,14 @@ class _SignInPageState extends State<SignInPage> {
             child: const Text('SIGN IN'),
             onPressed: _handleSignIn,
           ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Registration()),
+                );
+              },
+              child: Text('OTP SMS Pages')),
         ],
       );
     }

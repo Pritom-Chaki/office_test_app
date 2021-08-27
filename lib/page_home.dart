@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:office_test_app/calender/calender.dart';
+import 'package:office_test_app/nav_bar_ex.dart';
+import 'package:office_test_app/calender/page_hori_calender.dart';
+import 'package:office_test_app/oath2_signin/oath2_signin.dart';
 import 'package:office_test_app/page_chewie_player.dart';
-import 'package:office_test_app/page_facebook_signin.dart';
-import 'package:office_test_app/page_google_signIn.dart';
-import 'package:office_test_app/page_google_signin2.dart';
+import 'package:office_test_app/page_custom_loading.dart';
+import 'package:office_test_app/oath2_signin/page_facebook_signin.dart';
+import 'package:office_test_app/oath2_signin/page_google_signIn.dart';
+import 'package:office_test_app/oath2_signin/page_google_signin2.dart';
 import 'package:office_test_app/page_info.dart';
+import 'package:office_test_app/page_intro_slider.dart';
 import 'package:office_test_app/page_otp_sms.dart';
 import 'package:office_test_app/page_video_player.dart';
 import 'package:office_test_app/video_player/home_video_player.dart';
@@ -46,27 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignInPage()),
+                    MaterialPageRoute(builder: (context) => Oath2SignIn()),
                   );
                 },
-                child: Text('Google SignIn')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => GoogleSignInPage2()),
-                  );
-                },
-                child: Text('Google SignIn v:2')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => FacebookSignIn()),
-                  );
-                },
-                child: Text('Facebook Signin')),
+                child: Text('Oath2 SignIn')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -107,6 +96,38 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text('OTP SMS Pages')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => IntroScreen()),
+                  );
+                },
+                child: Text('Intro Slider')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainWidget()),
+                  );
+                },
+                child: Text('Custom Loading')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NavBarPage()),
+                  );
+                },
+                child: Text('Nav Bar')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CalenderHome()),
+                  );
+                },
+                child: Text('Calender')),
           ],
         ),
       ),
