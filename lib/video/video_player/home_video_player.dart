@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:office_test_app/video_player/asset_player.dart';
-import 'package:office_test_app/video_player/network_player.dart';
+import 'package:office_test_app/video/video_player/asset_player.dart';
+import 'package:office_test_app/video/video_player/network_player.dart';
+import 'package:office_test_app/video/video_player/widget_video_player.dart';
 
 class HomeVideoPlayer extends StatefulWidget {
   HomeVideoPlayer({Key? key}) : super(key: key);

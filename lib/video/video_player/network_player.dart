@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:office_test_app/video_player/widget_video_player.dart';
+import 'package:office_test_app/video/video_player/widget_video_player.dart';
 import 'package:video_player/video_player.dart';
 
 class NetworkPlayerWidget extends StatefulWidget {

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:office_test_app/calender/calender.dart';
 import 'package:office_test_app/nav_bar_ex.dart';
-import 'package:office_test_app/calender/page_hori_calender.dart';
+
 import 'package:office_test_app/oath2_signin/oath2_signin.dart';
-import 'package:office_test_app/page_chewie_player.dart';
+import 'package:office_test_app/page_add_widget.dart';
+
 import 'package:office_test_app/page_custom_loading.dart';
-import 'package:office_test_app/oath2_signin/page_facebook_signin.dart';
-import 'package:office_test_app/oath2_signin/page_google_signIn.dart';
-import 'package:office_test_app/oath2_signin/page_google_signin2.dart';
+
 import 'package:office_test_app/page_info.dart';
 import 'package:office_test_app/page_intro_slider.dart';
 import 'package:office_test_app/page_otp_sms.dart';
-import 'package:office_test_app/page_video_player.dart';
-import 'package:office_test_app/video_player/home_video_player.dart';
+import 'package:office_test_app/video/page_video_player_home.dart';
+import 'package:office_test_app/video/page_video_player_raw.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -42,12 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Wrap(
+          spacing: 10.0,
+          runSpacing: 10.0,
           children: <Widget>[
-            Text(
-              'Select Your Option',
-            ),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -60,26 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => VideoPlayerPage()),
+                    MaterialPageRoute(
+                        builder: (context) => VideoPlayerHomePage()),
                   );
                 },
-                child: Text('Video Player Raw')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeVideoPlayer()),
-                  );
-                },
-                child: Text('Home Video Player')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ChewieHomePage()),
-                  );
-                },
-                child: Text('Chewie Chewie')),
+                child: Text('All Video Player')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -128,6 +110,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text('Calender')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ResponsavelProfilePage()),
+                  );
+                },
+                child: Text('Add Widget')),
           ],
         ),
       ),
