@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:office_test_app/calender/calender.dart';
-import 'package:office_test_app/nav_bar_ex.dart';
-
+import 'package:office_test_app/display_page/display_page.dart';
 import 'package:office_test_app/oath2_signin/oath2_signin.dart';
-import 'package:office_test_app/page_add_widget.dart';
-
-import 'package:office_test_app/page_custom_loading.dart';
-
 import 'package:office_test_app/page_info.dart';
-import 'package:office_test_app/page_intro_slider.dart';
 import 'package:office_test_app/page_otp_sms.dart';
+import 'package:office_test_app/testing/time_picker_calender.dart';
 import 'package:office_test_app/video/page_video_player_home.dart';
-import 'package:office_test_app/video/page_video_player_raw.dart';
+
+import 'sqflite/sql_main.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -22,18 +18,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // int _counter = 0;
-  // void _incrementCounter() {
-  //   setState(() {
-  //     _counter++;
-  //   });
-  // }
-
-  // void _shareHobe() {
-  //   Share.share('check out my website https://example.com',
-  //       subject: 'Look what I made!');
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,6 +50,33 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
+                    MaterialPageRoute(builder: (context) => DisplayPage()),
+                  );
+                },
+                child: Text('Display Page')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CalenderHome()),
+                  );
+                },
+                child: Text('Calender')),
+            SizedBox(
+              width: 100,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SQLMain()),
+                  );
+                },
+                child: Text('SQL CURD')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
                     MaterialPageRoute(builder: (context) => AppInfoPages()),
                   );
                 },
@@ -82,43 +93,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => IntroScreen()),
-                  );
-                },
-                child: Text('Intro Slider')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MainWidget()),
-                  );
-                },
-                child: Text('Custom Loading')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => NavBarPage()),
-                  );
-                },
-                child: Text('Nav Bar')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CalenderHome()),
-                  );
-                },
-                child: Text('Calender')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
                     MaterialPageRoute(
-                        builder: (context) => ResponsavelProfilePage()),
+                        builder: (context) => TimePickerCalender()),
                   );
                 },
-                child: Text('Add Widget')),
+                child: Text('Time Picker Calender')),
           ],
         ),
       ),
