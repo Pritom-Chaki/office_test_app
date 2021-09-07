@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:office_test_app/display_page/listView_pagination.dart';
+import 'package:office_test_app/display_page/page_accordions.dart';
 import 'package:office_test_app/display_page/page_add_widget.dart';
+import 'package:office_test_app/display_page/page_pull_to_refresh.dart';
+import 'package:office_test_app/display_page/page_slide_to_delete.dart';
 import 'package:office_test_app/display_page/paginated_data.dart';
 
 import 'package:office_test_app/display_page/page_custom_loading.dart';
@@ -72,6 +75,31 @@ class DisplayPage extends StatelessWidget {
                   );
                 },
                 child: Text('Add Widget')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => AccordionHomePage()),
+                  );
+                },
+                child: Text('Accordion ')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PullToRefresh()),
+                  );
+                },
+                child: Text('Pull To Refresh')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SlideToDelete()),
+                  );
+                },
+                child: Text('Slide To Delete')),
           ],
         ),
       ),
