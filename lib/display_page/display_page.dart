@@ -9,6 +9,7 @@ import 'package:office_test_app/display_page/paginated_data.dart';
 import 'package:office_test_app/display_page/page_custom_loading.dart';
 import 'package:office_test_app/display_page/page_intro_slider.dart';
 import 'package:office_test_app/display_page/nav_bar_ex.dart';
+import 'package:office_test_app/display_page/stepper_test.dart';
 
 class DisplayPage extends StatelessWidget {
   const DisplayPage({Key? key}) : super(key: key);
@@ -100,6 +101,14 @@ class DisplayPage extends StatelessWidget {
                   );
                 },
                 child: Text('Slide To Delete')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StepperDemo()),
+                  );
+                },
+                child: Text('Stepper Demo')),
           ],
         ),
       ),

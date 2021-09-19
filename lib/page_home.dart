@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:office_test_app/calender/calender.dart';
 import 'package:office_test_app/display_page/display_page.dart';
 import 'package:office_test_app/oath2_signin/oath2_signin.dart';
-import 'package:office_test_app/page_info.dart';
+import 'package:office_test_app/settings/page_info.dart';
 import 'package:office_test_app/page_otp_sms.dart';
+import 'package:office_test_app/settings/settings.dart';
 import 'package:office_test_app/testing/time_picker_calender.dart';
 import 'package:office_test_app/video/page_video_player_home.dart';
 
@@ -62,6 +63,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text('Calender')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()),
+                  );
+                },
+                child: Text('Settings Pages')),
             SizedBox(
               width: 100,
             ),
@@ -73,22 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text('SQL CURD')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AppInfoPages()),
-                  );
-                },
-                child: Text('App Info Pages')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Registration()),
-                  );
-                },
-                child: Text('OTP SMS Pages')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(

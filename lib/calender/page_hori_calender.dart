@@ -45,10 +45,10 @@ class _CalenderPageState extends State<CalenderPage> {
                   backgroundColor: Colors.white,
                   tableCalenderThemeData: ThemeData.light().copyWith(
                     primaryColor: Colors.green,
-                    accentColor: Colors.red,
-                    colorScheme: ColorScheme.light(primary: Colors.green),
                     buttonTheme:
                         ButtonThemeData(textTheme: ButtonTextTheme.primary),
+                    colorScheme: ColorScheme.light(primary: Colors.green)
+                        .copyWith(secondary: Colors.red),
                   ),
                   selectedColor: Colors.redAccent,
                   onDateSelected: (date) {

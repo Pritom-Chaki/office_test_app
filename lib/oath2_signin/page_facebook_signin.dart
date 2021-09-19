@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:office_test_app/page_otp_sms.dart';
 
 class FacebookSignIn extends StatefulWidget {
   const FacebookSignIn({Key? key}) : super(key: key);
@@ -41,15 +40,15 @@ class _FacebookSignInState extends State<FacebookSignIn> {
               )
             : Column(
                 children: [
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Registration()),
-                        );
-                      },
-                      child: Text('OTP SMS Pages')),
+                  // ElevatedButton(
+                  //     onPressed: () {
+                  //       Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //             builder: (context) => Registration()),
+                  //       );
+                  //     },
+                  //     child: Text('OTP SMS Pages')),
                   Center(
                     child: ElevatedButton(
                       child: Text("Login with Facebook"),
