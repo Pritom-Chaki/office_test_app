@@ -9,6 +9,7 @@ import 'package:office_test_app/display_page/paginated_data.dart';
 import 'package:office_test_app/display_page/page_custom_loading.dart';
 import 'package:office_test_app/display_page/page_intro_slider.dart';
 import 'package:office_test_app/display_page/nav_bar_ex.dart';
+import 'package:office_test_app/display_page/progress_bar.dart';
 import 'package:office_test_app/display_page/stepper_test.dart';
 
 class DisplayPage extends StatelessWidget {
@@ -109,6 +110,14 @@ class DisplayPage extends StatelessWidget {
                   );
                 },
                 child: Text('Stepper Demo')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProgressBar()),
+                  );
+                },
+                child: Text('ProgressBar')),
           ],
         ),
       ),
